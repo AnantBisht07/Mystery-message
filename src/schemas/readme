@@ -1,0 +1,5 @@
+So we are make this schemas for validations done by "ZOD"
+like for e.g.
+User data bhejega login ya signup krte waqt kya wo shi hai ya nahi uska validation wgrh
+
+We know that mongoose ke andr already validation haii but wo fr poore user ka hai, but we want individual validations for e.g. kya signup krte waqt sari chize valid aari hain ? 
