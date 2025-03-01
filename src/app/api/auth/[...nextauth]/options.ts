@@ -43,7 +43,7 @@ export const authOptions:NextAuthOptions = {
                     if (!user.password) {
                         throw new Error("User password not found in database");
                     }
-                    const isPasswordCorrect = await bcrypt.compare(credentials?.password, || "", user?.password || "")
+                    const isPasswordCorrect = await bcrypt.compare(credentials?.password || "", user?.password || "")
                     if (isPasswordCorrect) return user.toObject() as User;
 
                     else {
