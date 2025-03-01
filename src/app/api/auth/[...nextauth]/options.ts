@@ -21,9 +21,9 @@ export const authOptions:NextAuthOptions = {
             },
             async authorize(credentials): Promise<User> {
                 console.log("Received Credentials:", credentials);
-                if(!credentials) {
-                    toast.error('Something went wrong')
-                }
+                 if (!credentials || !credentials.email || !credentials.password) {
+        throw new Error("Invalid credentials provided!");
+    }
                 
                 await dbConnect()
                 try {
