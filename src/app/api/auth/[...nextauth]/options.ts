@@ -21,16 +21,13 @@ export const authOptions:NextAuthOptions = {
             async authorize(credentials): Promise<User> {
                 console.log("Received Credentials:", credentials);
 
-                if (!credentials || !credentials.email || !credentials.password) {
-                    throw new Error("Missing email or password");
-                }            
-
+                
                 await dbConnect()
                 try {
                     const user = await UserModel.findOne({
                         $or: [
-                            {email: credentials.email},
-                            {username: credentials.email },
+                            {email: credentials.identifier},
+                            {username: credentials.identifier },
                         ],
                     })
                     if(!user) {
