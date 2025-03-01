@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcryptjs'
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User";
+import { toast } from 'sonner'
 
 import { NextAuthOptions, User } from "next-auth";
 
@@ -21,7 +22,7 @@ export const authOptions:NextAuthOptions = {
             async authorize(credentials): Promise<User> {
                 console.log("Received Credentials:", credentials);
                 if(!credentials) {
-                    toast('Something went wrong')
+                    toast.error('Something went wrong')
                 }
                 
                 await dbConnect()
