@@ -20,7 +20,9 @@ export const authOptions:NextAuthOptions = {
             },
             async authorize(credentials): Promise<User> {
                 console.log("Received Credentials:", credentials);
-
+                if(!credentials) {
+                    toast('Something went wrong')
+                }
                 
                 await dbConnect()
                 try {
