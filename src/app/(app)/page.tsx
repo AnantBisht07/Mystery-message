@@ -39,7 +39,7 @@ const Home = () => {
   }
   return (
     <>
-      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-24 py-12 mt-20 text-white">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-24 py-12 mt-28 lg:mt-20 text-white">
         <section className="text-center mb-8 md:mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-8xl font-extrabold leading-tight text-center text-yellow-400 drop-shadow-lg">
             Dive into the world of <br className="hidden md:block" />
