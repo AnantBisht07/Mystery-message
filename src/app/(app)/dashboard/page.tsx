@@ -251,9 +251,11 @@ const profileUrl = username ? `${baseUrl}/u/${username}` : "";
             Public Profile
           </Button>
         </Link>
-        <Button className="mt-6 bg-[#6547B0] hover:bg-[#4f398a]">
+        <Link href='/subscribe'>
+          <Button className="mt-6 bg-[#6547B0] hover:bg-[#4f398a]">
           Subscribe
         </Button>
+        </Link>
       </div>
 
       {/* Messages List */}
